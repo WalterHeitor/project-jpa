@@ -32,5 +32,9 @@ public class Categoria {
 		super();
 		this.nome = nome;
 	}
+	@Override
+    public String toString() {
+        return nome + " - " + id;
+    }
     
 }
