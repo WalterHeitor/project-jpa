@@ -38,8 +38,9 @@ public class CriaConta {
         em1.close();
         conta1.setSaldo(3500.0);// O estado Detached significa que o objeto não está vinculado ao EntityManager
         
+        //por isso temos que criar de novo.
         EntityManagerFactory emf2 = Persistence.createEntityManagerFactory("contas");
-        EntityManager em2 = emf.createEntityManager();
+        EntityManager em2 = emf2.createEntityManager();
         
         em2.getTransaction().begin();
         em2.merge(conta1);
